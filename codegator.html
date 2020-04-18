@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>P5.js Example</title>
+<script
+
+src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+
+<script>
+var img1
+var img2
+var img3
+var a=-50 
+var b=15
+function preload(){
+  img1=loadImage("codegator.png");
+  img2=loadImage("codegator2.png");
+}
+function setup() {
+  createCanvas(400, 400);
+  }
+
+function draw() {
+  background(220);
+  if(mouseIsPressed){
+    image(img2, a-15,b-18);
+ }
+  else
+    image(img1, a-15,b-18);
+a=a+5;
+  if(a>500)
+  {a=-50;
+   b=b+10;
+   }
+  if(b>400)
+  {b=10}
+}
+</script>
+</head>
+<body>
+</body>
+</html>
